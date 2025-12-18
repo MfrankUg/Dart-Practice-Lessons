@@ -13,6 +13,17 @@ class Student {
   String grade;
 
   // named constractor
-  
+  Student.stdName(String name) {
+    this.name = "Sarah";
+  }
+  Student.stdAge(int age) {
+    this.age = 24;
+  }
+  Student.stdGrade(String grade) {
+    this.grade = "grade1";
+  }
 }
 
+void main() {
+  int res = Student.stdAge(12);
+}
