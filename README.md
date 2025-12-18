@@ -383,5 +383,3 @@ After completing this repository, learners should be able to:
 
 Happy coding.
 
-```
-```
