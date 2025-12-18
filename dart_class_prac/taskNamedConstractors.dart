@@ -12,18 +12,37 @@ class Student {
   int age;
   String grade;
 
-  // named constractor
-  Student.stdName(String name) {
-    this.name = "Sarah";
-  }
-  Student.stdAge(int age) {
-    this.age = 24;
-  }
-  Student.stdGrade(String grade) {
-    this.grade = "grade1";
+  // Constructor with full details
+  Student.full(this.name, this.age, this.grade);
+
+  // Named constructor: only name is known
+  Student.withName(this.name)
+      : age = 0,
+        grade = "Not Assigned";
+  
+  // Named constructor: only age is known
+  Student.withAge(this.age)
+      : name = "Unknown",
+        grade = "Not Assigned";
+
+  // Named constructor: only grade is known
+  Student.withGrade(this.grade)
+      : name = "Unknown",
+        age = 0;
+
+  void displayInfo() {
+    print("Name: $name, Age: $age, Grade: $grade");
   }
 }
 
 void main() {
-  int res = Student.stdAge(12);
+  Student s1 = Student.full("Sarah", 20, "Grade 1");
+  Student s2 = Student.withName("John");
+  Student s3 = Student.withAge(24);
+  Student s4 = Student.withGrade("Grade 3");
+
+  s1.displayInfo();
+  s2.displayInfo();
+  s3.displayInfo();
+  s4.displayInfo();
 }
