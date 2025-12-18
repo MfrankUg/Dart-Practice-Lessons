@@ -1,5 +1,5 @@
 # Dart-Practice-Lessons
-```md
+
 # Dart Basics and Practice Repository
 
 ## Overview
@@ -322,7 +322,7 @@ Demonstrates enums for representing fixed sets of values.
 1. Verify Dart installation:
    ```bash
    dart --version
-````
+
 
 2. Navigate to the project directory:
 
@@ -383,5 +383,3 @@ After completing this repository, learners should be able to:
 
 Happy coding.
 
-```
-```
