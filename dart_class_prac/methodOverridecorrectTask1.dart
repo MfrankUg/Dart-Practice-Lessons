@@ -21,6 +21,6 @@ class Circle extends Shape {
 void main() {
   Shape rectangleArea = Rectangle(12, 12);
   Shape circleArea = Circle(12);
-  print("Area of a Rectangle $rectangleArea ");
-  print("Area of a Rectangle $circleArea");
+  print("Area of a Rectangle ${rectangleArea.calculateArea()}");
+  print("Area of a circle ${circleArea.calculateArea()}");
 }
