@@ -18,3 +18,9 @@ class Circle extends Shape {
   double calculateArea() => 3.14 * radius * radius;
 }
 
+void main() {
+  Shape rectangleArea = Rectangle(12, 12);
+  Shape circleArea = Circle(12);
+  print("Area of a Rectangle $rectangleArea ");
+  print("Area of a Rectangle $circleArea");
+}
