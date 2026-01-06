@@ -1,7 +1,8 @@
 // Task 2: The Employee Payroll System (Advanced)
 // Goal: Practice extending logic using the super keyword rather than just replacing it.
 
-// Scenario: You are managing salaries for a company. Every employee gets a base salary, but Managers get an additional bonus on top of that base calculation.
+// Scenario: You are managing salaries for a company. Every employee gets a base salary,
+// but Managers get an additional bonus on top of that base calculation.
 /*
 Requirements:
 
@@ -24,3 +25,12 @@ In main, create a regular Employee and a Manager and print their final paychecks
 Focus: This teaches you the "Extension" pattern—keeping the old logic and adding to it, rather than deleting it.
 
 */
+
+class Employee {
+  String name;
+  double salaryRate;
+  int hoursWorked;
+  Employee(this.name, this.salaryRate, this.hoursWorked);
+
+  void calculatePay() => salaryRate * hoursWorked;
+}
