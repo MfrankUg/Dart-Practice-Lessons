@@ -32,5 +32,12 @@ class Employee {
   int hoursWorked;
   Employee(this.name, this.salaryRate, this.hoursWorked);
 
-  void calculatePay() => salaryRate * hoursWorked;
+  double calculatePay() => salaryRate * hoursWorked;
+}
+
+class Manger extends Employee {
+  double bonus;
+  Manger(super.name, super.salaryRate, super.hoursWorked, this.bonus);
+  
+
 }
