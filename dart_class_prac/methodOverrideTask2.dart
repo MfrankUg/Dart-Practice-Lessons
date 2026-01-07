@@ -38,6 +38,16 @@ class Employee {
 class Manger extends Employee {
   double bonus;
   Manger(super.name, super.salaryRate, super.hoursWorked, this.bonus);
-  
+  @override
+  double calculatePay() {
+    double superPay = super.calculatePay();
+    return superPay + bonus;
+  }
+}
 
+void main() {
+  Employee regularEmployee = Employee("TOM", 30, 12);
+  Manger manger = Manger("Jerry", 50, 12, 3);
+  print("This is the regular pay ${regularEmployee.calculatePay()}");
+  print("This is the managers pay ${manger.calculatePay()}");
 }
