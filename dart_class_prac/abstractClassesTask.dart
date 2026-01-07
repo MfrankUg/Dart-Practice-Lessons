@@ -25,10 +25,35 @@ class MobileMoney extends PaymentProvider {
     );
   }
 }
-
+/*
 void main() {
   PaymentProvider CreditPayment = CreditCard();
   PaymentProvider MobilePayment = MobileMoney();
   CreditPayment.processPayment(20000);
   MobilePayment.processPayment(1500);
+}
+*/
+
+
+void main() {
+  // 1. Create a List. 
+  // IMPORTANT: We tell the list to hold the PARENT type (PaymentProvider).
+  // This allows it to store ANY child of that parent.
+  List<PaymentProvider> batchList = [
+    CreditCard(),
+    MobileMoney(),
+    CreditCard() // You can mix them up!
+  ];
+
+  print("--- Starting Batch Process ---");
+
+  // 2. The Loop
+  // "payment" is a temporary variable that becomes each item in the list, one by one.
+  for (PaymentProvider payment in batchList) {
+    
+    // The magic: Dart figures out which version of the method to run
+    // based on what the object actually is (CreditCard or MobileMoney).
+    payment.processPayment(500.0);
+    
+  }
 }
