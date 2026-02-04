@@ -10,6 +10,7 @@ void complexTask(String Message) {
 
 void main() {
   Isolate.spawn(complexTask, "$name complex");
-  print("this is the normal text 1");
-  print("this is the normal text 2");
+  name = "muhindo";
+  print("this is the normal text 1 $name");
+  print("this is the normal text 2 $name");
 }
